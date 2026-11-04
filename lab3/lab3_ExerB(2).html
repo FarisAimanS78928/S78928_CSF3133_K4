@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ticket Booking</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <div id="content">
+
+        <h2>Book Your Ticket</h2>
+
+        <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+        <h2>Now Showing</h2>
+
+        <ul>
+            <li>
+                <strong>Space Rangers</strong> -
+                <span>PG</span> -
+                <a href="https://www.youtube.com/results?search_query=Space+Rangers+trailer"
+                   target="_blank">Watch Trailer</a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong> -
+                <span>U</span> -
+                <a href="https://www.youtube.com/results?search_query=Kampung+Comedy+trailer"
+                   target="_blank">Watch Trailer</a>
+            </li>
+
+            <li>
+                <strong>The Lost Kingdom</strong> -
+                <span>13+</span> -
+                <a href="https://www.youtube.com/results?search_query=The+Lost+Kingdom+trailer"
+                   target="_blank">Watch Trailer</a>
+            </li>
+        </ul>
+
+        <form action="booking.php" method="get"
+              oninput="
+              this.elements['total'].value =
+              Number(this.elements['adult'].value) +
+              Number(this.elements['child'].value);
+              this.elements['totalPrice'].value =
+              Number(this.elements['adult'].value) * 12 +
+              Number(this.elements['child'].value) * 8;
+              ">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name"
+                   required autofocus>
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number"
+                   required>
+            <br><br>
+
+            <label for="date">Show Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+
+            <label for="time">Show Time:</label>
+            <input type="time" id="time" name="time" required>
+            <br><br>
+
+            <label for="movie">Movie:</label>
+            <input type="text" id="movie" name="movie"
+                   list="movies" required>
+
+            <datalist id="movies">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="The Lost Kingdom">
+            </datalist>
+            <br><br>
+
+            <label for="adult">Adult Tickets (RM12 each):</label>
+            <input type="number" id="adult" name="adult"
+                   min="0" value="0" required>
+            <br><br>
+
+            <label for="child">Child Tickets (RM8 each):</label>
+            <input type="number" id="child" name="child"
+                   min="0" value="0" required>
+            <br><br>
+
+            <label for="rating">Rate Our Service:</label>
+            <input type="range" id="rating" name="rating"
+                   min="1" max="5" step="1" value="3">
+            <br><br>
+
+            <label>Total Tickets:</label>
+            <output name="total" for="adult child">0</output>
+            <br><br>
+
+            <label>Total Price:</label>
+            RM <output name="totalPrice" for="adult child">0</output>
+            <br><br>
+
+            <input type="submit" value="Book Now">
+
+        </form>
+
+    </div>
+
+    <div id="footer">
+        <p>e-Ticket&reg; &ndash; Campus Cinema &lt; RM10 every Tuesday</p>
+        <p>&copy; 2026 CineKampus. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
