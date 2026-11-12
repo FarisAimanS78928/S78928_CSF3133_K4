@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>e-Café Campus</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="cafe.css">
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Introduction Styling */
+
+        #intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+            padding: 12px;
+        }
+
+        /* Heading Decoration */
+
+        h2 {
+            text-decoration: underline;
+        }
+
+        /* Highlight Promotion Prices */
+
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+
+        /* Old Price Decoration */
+
+        .old-price {
+            text-decoration: line-through;
+            color: #777;
+            margin-right: 8px;
+        }
+
+        /* Responsive Video */
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Menu Item Cards */
+
+        .cafe-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+    ERROR CORRECTIONS FROM THE ORIGINAL CODE
+
+    Error 1 (Original Line 9):
+    list-style-type: no is invalid.
+    Correct value: list-style-type: none.
+
+    Error 2 (Original Lines 13-16):
+    Link pseudo-classes were written in the wrong order.
+    Correct order: link, visited, hover, active.
+
+    Error 3 (Original Line 17):
+    text-decoration: overlined is invalid.
+    Correct value: text-decoration: overline.
+
+    Error 4 (Original Line 18):
+    Missing colon after the color property.
+    Correct syntax: color: #333333.
+
+    Error 5 (Original Line 22):
+    Missing dot before the highlight class selector.
+    Correct selector: .highlight.
+
+    Error 6 (Original Lines 19 and 41):
+    The #intro ID selector did not match class="intro".
+    The paragraph now uses id="intro".
+
+    Error 7 (Original Line 34):
+    href="menu" did not link to the menu section.
+    Correct value: href="#menu".
+
+    Error 8 (Original Lines 42 and 46):
+    Duplicate id="item" values.
+    The articles now use class="cafe-card".
+
+    Error 9 (Original Line 54):
+    The video source type was incorrect.
+    Correct value: type="video/mp4".
+
+    Error 10 (Original Line 53):
+    The video element needed controls.
+
+    -->
+
+
+    <!-- Header Section -->
+
+    <header>
+
+        <h1>e-Café Campus</h1>
+
+        <p>
+            Fresh brews, tasty bites,
+            and friendly campus vibes.
+        </p>
+
+    </header>
+
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#menu">Menu</a>
+            </li>
+
+            <li>
+                <a href="#video">Video</a>
+            </li>
+
+            <li>
+                <a href="#feedback">Feedback</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+        <!-- Menu Section -->
+
+        <section id="menu">
+
+            <h2>Today's Menu</h2>
+
+            <p id="intro">
+                Freshly brewed coffee and local delights every day.
+            </p>
+
+
+            <!-- Menu Item 1 -->
+
+            <article class="cafe-card">
+
+                <h3>Kopi Tarik</h3>
+
+                <p>
+                    Old price:
+                    <span class="old-price">RM 4.50</span>
+
+                    Special price:
+                    <span class="highlight">RM 3.50</span>
+                </p>
+
+            </article>
+
+
+            <!-- Menu Item 2 -->
+
+            <article class="cafe-card">
+
+                <h3>Nasi Lemak</h3>
+
+                <p>
+                    Old price:
+                    <span class="old-price">RM 6.50</span>
+
+                    Special price:
+                    <span class="highlight">RM 5.00</span>
+                </p>
+
+            </article>
+
+
+            <!-- Menu Item 3 -->
+
+            <article class="cafe-card">
+
+                <h3>Iced Chocolate</h3>
+
+                <p>
+                    Old price:
+                    <span class="old-price">RM 7.00</span>
+
+                    Special price:
+                    <span class="highlight">RM 5.50</span>
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- Video Section -->
+
+        <section id="video">
+
+            <h2>Watch Our Story</h2>
+
+            <figure>
+
+                <video controls width="640" height="360">
+
+                    <source
+                        src="cafe.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+                <figcaption>
+                    Take a quick look at the food, drinks,
+                    and atmosphere at e-Café Campus.
+                </figcaption>
+
+            </figure>
+
+            <p class="note">
+                Place an MP4 video named cafe.mp4
+                in the same folder to play your own video.
+            </p>
+
+        </section>
+
+
+        <!-- Feedback Form Section -->
+
+        <section id="feedback">
+
+            <h2>Give Us Your Feedback</h2>
+
+            <form
+                class="feedback-form"
+                action="#"
+                method="get">
+
+                <!-- Name Field -->
+
+                <label for="name">
+                    Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required>
+
+
+                <!-- Email Field -->
+
+                <label for="email">
+                    E-mail:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+
+
+                <!-- Visit Type -->
+
+                <fieldset>
+
+                    <legend>Visit Type</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="visit-type"
+                            value="dine-in"
+                            required>
+
+                        Dine-in
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="visit-type"
+                            value="take-away">
+
+                        Take-away
+                    </label>
+
+                </fieldset>
+
+
+                <!-- Favourite Items -->
+
+                <fieldset>
+
+                    <legend>Favourite Items</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="favourite"
+                            value="kopi-tarik">
+
+                        Kopi Tarik
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="favourite"
+                            value="nasi-lemak">
+
+                        Nasi Lemak
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="favourite"
+                            value="iced-chocolate">
+
+                        Iced Chocolate
+                    </label>
+
+                </fieldset>
+
+
+                <!-- Optional Comments -->
+
+                <label for="comments">
+                    Comments (optional):
+                </label>
+
+                <textarea
+                    id="comments"
+                    name="comments"
+                    rows="4"></textarea>
+
+
+                <!-- Submit Button -->
+
+                <button type="submit">
+                    Submit Feedback
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer Section -->
+
+    <footer id="contact">
+
+        <p>
+            &copy; 2026 e-Café Campus
+        </p>
+
+        <address>
+            Email us at:
+
+            <a href="mailto:hello@example.com">
+                hello@example.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+
+</html>

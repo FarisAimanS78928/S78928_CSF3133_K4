@@ -1,0 +1,249 @@
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fffaf3;
+}
+
+
+/* Header Styling */
+
+header {
+    text-align: center;
+    padding: 30px 5%;
+    background: #f7dfc4;
+}
+
+h1 {
+    text-decoration: overline;
+    color: #5d341b;
+    margin-bottom: 4px;
+}
+
+
+/* Section Styling */
+
+section {
+    width: 90%;
+    max-width: 900px;
+    margin: 28px auto;
+}
+
+h2 {
+    color: #6f3d20;
+}
+
+
+/* Navigation Bar */
+
+nav {
+    background-color: #5d341b;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 14px 20px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+/* Navigation Link States */
+
+nav a:link {
+    color: #fff;
+}
+
+nav a:visited {
+    color: #eadcf8;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #b9652d;
+}
+
+nav a:active {
+    color: #fff;
+    background-color: #943f20;
+}
+
+
+/* Menu Item Cards */
+
+.cafe-card {
+    background: #fff;
+}
+
+
+/* Feedback Form */
+
+.feedback-form {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 22px;
+
+    border: 1px solid #dfc4ac;
+    border-radius: 10px;
+
+    background-color: #fff1e3;
+}
+
+.feedback-form > label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+/* Text Inputs and Textarea */
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+
+    padding: 10px;
+    margin-top: 5px;
+
+    border: 1px solid #c6a58b;
+    border-radius: 5px;
+
+    font: inherit;
+}
+
+
+/* Fieldsets */
+
+.feedback-form fieldset {
+    margin-top: 14px;
+
+    border: 1px solid #dfc4ac;
+    border-radius: 5px;
+}
+
+.feedback-form fieldset label {
+    display: inline-block;
+    margin: 5px 12px 5px 0;
+}
+
+
+/* Submit Button */
+
+button {
+    margin-top: 18px;
+    padding: 11px 18px;
+
+    border: 0;
+    border-radius: 5px;
+
+    color: white;
+    background-color: #7a4323;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b9652d;
+}
+
+
+/* Video Styling */
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* Footer Styling */
+
+footer {
+    text-align: center;
+    padding: 24px;
+
+    color: white;
+    background: #5d341b;
+}
+
+footer a:link {
+    color: #ffe0b8;
+}
+
+footer a:visited {
+    color: #eadcf8;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer a:active {
+    color: #ffcc80;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    nav a {
+        padding: 11px 12px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        width: 92%;
+    }
+
+    .feedback-form {
+        padding: 15px;
+    }
+
+}

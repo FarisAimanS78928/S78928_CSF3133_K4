@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Visit Terengganu</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        #welcome {
+            background: linear-gradient(120deg, #e0f7fa, #fff8e1);
+        }
+
+        #trip h2 {
+            color: #075985;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="welcome">
+        <h1>Visit Terengganu</h1>
+
+        <p>
+            Discover beautiful islands, local food,
+            and rich culture.
+        </p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="#destinations">Destinations</a>
+            </li>
+
+            <li>
+                <a href="#video">Video</a>
+            </li>
+
+            <li>
+                <a href="#trip">Plan Your Trip</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Destinations Section -->
+        <section id="destinations">
+
+            <h2>Featured Destinations</h2>
+
+            <div class="cards">
+
+                <!-- Destination 1 -->
+                <article class="card">
+                    <h3>Redang Island</h3>
+
+                    <p>
+                        Enjoy clear turquoise water,
+                        colourful marine life, and
+                        beautiful beaches.
+                    </p>
+
+                    <p class="price">
+                        <span class="old-price">RM 299</span>
+                        <strong>RM 199</strong> per person
+                    </p>
+                </article>
+
+                <!-- Destination 2 -->
+                <article class="card">
+                    <h3>Drawbridge & Kuala Terengganu</h3>
+
+                    <p>
+                        Enjoy waterfront views, local markets,
+                        and the iconic drawbridge.
+                    </p>
+
+                    <p class="price">
+                        <span class="old-price">RM 180</span>
+                        <strong>RM 129</strong> per person
+                    </p>
+                </article>
+
+                <!-- Destination 3 -->
+                <article class="card">
+                    <h3>Kenyir Lake</h3>
+
+                    <p>
+                        Explore lush rainforest scenery,
+                        islands, and peaceful lake views.
+                    </p>
+
+                    <p class="price">
+                        <span class="old-price">RM 250</span>
+                        <strong>RM 175</strong> per person
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- Meter Element -->
+            <p class="center">
+                Trip seats filled:
+
+                <meter min="0" max="40" value="28">
+                    28 out of 40
+                </meter>
+
+                28 / 40
+            </p>
+
+        </section>
+
+        <!-- Video Section -->
+        <section id="video">
+
+            <h2>Experience Terengganu</h2>
+
+            <figure>
+
+                <video controls width="640" height="360">
+
+                    <source
+                        src="terengganu.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support HTML video.
+
+                </video>
+
+                <figcaption class="caption">
+                    Discover the beauty of Terengganu
+                    through our promotional video.
+                </figcaption>
+
+            </figure>
+
+            <p class="small-note">
+                
+            </p>
+
+        </section>
+
+        <!-- Trip Registration Section -->
+        <section id="trip">
+
+            <h2>Plan Your Trip</h2>
+
+            <p>
+                Complete this form to tell us
+                what you would like to explore.
+            </p>
+
+            <form class="trip-form" action="#" method="get">
+
+                <!-- Name -->
+                <label for="visitor-name">Name:</label>
+
+                <input
+                    type="text"
+                    id="visitor-name"
+                    name="name"
+                    required>
+
+                <!-- Email -->
+                <label for="visitor-email">E-mail:</label>
+
+                <input
+                    type="email"
+                    id="visitor-email"
+                    name="email"
+                    required>
+
+                <!-- Traveller Type -->
+                <fieldset>
+
+                    <legend>Traveller Type</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="traveller-type"
+                            value="student"
+                            required>
+                        Student
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="traveller-type"
+                            value="staff">
+                        Staff
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="traveller-type"
+                            value="public">
+                        Public
+                    </label>
+
+                </fieldset>
+
+                <!-- Interests -->
+                <fieldset>
+
+                    <legend>Interests</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="islands">
+                        Islands
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="food">
+                        Food
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="culture">
+                        Culture
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="interests"
+                            value="nature">
+                        Nature
+                    </label>
+
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit">
+                    Submit Interest
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+
+        <p>
+            &copy; 2026 Visit Terengganu Tourism Promotion
+        </p>
+
+        <address>
+            Contact:
+            <a href="mailto:info@example.com">
+                info@example.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+</html>
