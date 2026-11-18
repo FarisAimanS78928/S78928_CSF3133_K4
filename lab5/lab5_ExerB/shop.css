@@ -1,0 +1,101 @@
+/* Use Roboto for general page text. */
+body {
+    font-family: 'Roboto', sans-serif; /* Error 1: Misspelled font name */
+}
+
+/* Use Merriweather to distinguish headings from body text. */
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Keep paragraph text comfortably spaced. */
+p {
+    line-height: 1.6;
+}
+
+/* Give the page title a photographic banner with readable white text. */
+header {
+    background-image: url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Create the dark horizontal navigation bar. */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Place each navigation item side by side. */
+li {
+    float: left;
+}
+
+/* Make navigation links fill their items and provide click-friendly spacing. */
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover { /* Error 3: Unknown psudo-class or element */
+    background-color: #111;
+}
+
+/* Mark the current page with a green background. */
+li a.active {
+    background-color: #04AA6D;
+}
+
+/* Make the product table full-width with a clean, solid background. */
+#product {
+    border-collapse: collapse; /* Error 4: collapsed is not border-collapse value. */
+    width: 100%;
+    background-color: white;
+}
+
+#product td, #product th { /* Error 5 : misspelled product */
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Shade alternating rows for easier scanning. */
+#product tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#product tr:hover { /* Error 6: misspelled selector */
+    background-color: #ddd;
+}
+
+/* Emphasize and center the table's column headings. */
+#product th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Align prices to make the numeric values easier to compare. */
+#product td:nth-child(3) {
+    text-align: right;
+}
+
+/* Use a subtle footer background with centered text and comfortable spacing. */
+footer {
+    background-color: #f1f1f1; /* Error 7: missing semicolon */
+    text-align: center;
+    padding: 12px;
+}
