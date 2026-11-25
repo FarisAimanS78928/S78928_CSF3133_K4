@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set the document encoding, mobile viewport, title, and page stylesheet. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-card">
+    <!-- Introduce the game and explain its rules. -->
+    <header>
+      <p class="eyebrow">A classic showdown</p>
+      <h1>Rock Paper Scissors</h1>
+      <p class="instruction">Choose your move. Rock beats scissors, paper beats rock, and scissors beats paper.</p>
+    </header>
+
+    <!-- Collect the player's name and provide the game start control. -->
+    <section class="player-panel" aria-label="Player setup">
+      <label for="playerName">Your name</label>
+      <div class="player-controls">
+        <input id="playerName" name="playerName" type="text" placeholder="Enter your name" maxlength="30" autocomplete="given-name">
+        <button class="primary-button" type="button" onclick="startGame()">Start Game</button>
+      </div>
+      <p id="welcome" class="welcome" aria-live="polite">Enter your name to get started.</p>
+    </section>
+
+    <!-- Let the player choose a move and display both choices. -->
+    <section class="game-section" aria-label="Choose your move">
+      <h2>Make your move</h2>
+      <div class="choice-buttons">
+        <button class="choice-button" type="button" onclick="playRound('rock')" disabled><span>Rock</span></button>
+        <button class="choice-button" type="button" onclick="playRound('paper')" disabled><span>Paper</span></button>
+        <button class="choice-button" type="button" onclick="playRound('scissors')" disabled><span>Scissors</span></button>
+      </div>
+
+      <div class="duel" aria-label="Round choices">
+        <div class="contestant">
+          <img id="playerImg" alt="Your choice has not been made yet">
+          <p id="playerLabel">You</p>
+        </div>
+        <span class="versus" aria-hidden="true">VS</span>
+        <div class="contestant">
+          <img id="computerImg" alt="The computer's choice has not been made yet">
+          <p>Computer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Show the latest outcome and the running score. -->
+    <section class="result-section" aria-label="Game results">
+      <p id="result" aria-live="polite">Your result will appear here.</p>
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div><span id="wins">0</span><small>Wins</small></div>
+        <div><span id="losses">0</span><small>Losses</small></div>
+        <div><span id="draws">0</span><small>Draws</small></div>
+      </div>
+    </section>
+
+    <!-- List each round and provide summary and reset actions. -->
+    <section class="history-section" aria-label="Round history">
+      <h2>Round history</h2>
+      <div class="table-wrap">
+        <table id="history">
+          <thead>
+            <tr>
+              <th scope="col">Round</th>
+              <th scope="col">You</th>
+              <th scope="col">Computer</th>
+              <th scope="col">Result</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <tr class="empty-row"><td colspan="4">No rounds played yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="action-buttons">
+        <button class="secondary-button" type="button" onclick="showSummary()">Show Summary</button>
+        <button class="text-button" type="button" onclick="resetGame()">Reset</button>
+      </div>
+    </section>
+
+    <!-- Display the game start time and copyright. -->
+    <footer>
+      <p id="startTime">Game not started</p>
+      <p>&copy; 2026 Rock Paper Scissors</p>
+    </footer>
+  </main>
+  <!-- Load the game behavior after the page elements are available. -->
+  <script src="game.js"></script>
+</body>
+</html>

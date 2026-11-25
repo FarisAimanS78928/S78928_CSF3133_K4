@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grade Calculator</title>
+        <!-- Load the page styles from the external stylesheet. -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="calculator">
+            <h1>Student Grade Calculator</h1>
+            <form name="gradeForm" onsubmit="return checkMark()"><!-- Error 6 (grade.html, original line 9): Return the handler result to prevent default submission. -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="mark">Mark (0-100):</label>
+                <input type="number" id="mark" name="mark" min="0" max="100" step="any"><!-- Error 10 (grade.html, original line 13): Use a numeric field for marks. -->
+
+                <!-- New: This button fills the mark field with a random whole-number mark. -->
+                <button type="button" onclick="generateRandomMark()">Random Mark</button>
+                <button type="submit">Check Grade</button>
+            </form>
+
+            <p id="result" aria-live="polite"></p>
+            <!-- New: Show the time when a valid grade is calculated. -->
+            <p id="checkedOn"></p>
+
+            <button type="button" onclick="showTable()">Show Grade Table</button><!-- Error 11 (grade.html, original line 17): Match the JavaScript function's capitalization. -->
+            <div id="tableContainer"></div>
+        </main>
+        <!-- Load the page's calculator behavior. -->
+        <script src="grade.js"></script><!-- Error 14 (grade.html, original line 19): Link the actual JavaScript filename. -->
+    </body>
+</html>
